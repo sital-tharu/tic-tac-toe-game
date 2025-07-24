@@ -34,3 +34,11 @@ body{
     color: #b0413e;
     background-color: #ffffc7;
 }
+
+#reset{
+    padding:1rem;
+    font-size: 1rem;
+    background-color:rgb(219, 240, 188);
+    border: none;
+    border-radius: 1rem;
+}

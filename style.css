@@ -42,3 +42,16 @@ body{
     border: none;
     border-radius: 1rem;
 }
+
+.msg-container {
+    height: 8vh;
+}
+
+#msg {
+    color: #333;
+    font-size: 2rem;
+}
+
+.hide {
+    display: none;
+}

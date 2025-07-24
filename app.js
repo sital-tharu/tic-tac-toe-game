@@ -17,6 +17,19 @@ const winPatterns = [
 
 ]
 
+const resetGame = () => {
+    turnO = true;
+    enableBoxes();
+    msgContainer.classList.add("hide");
+};
+
+const enableBoxes = () => {
+    for (let box of boxes) {
+        box.disabled = false;
+        box.innerText = "";
+    }
+};
+
 boxes.forEach((box) => {
     box.addEventListener("click", () => {
         if(turnO) {
@@ -53,7 +66,10 @@ const checkWinner = () => {
         if (pos1Val !== "" && pos2Val !== "" && pos3Val !== "") {
             if (pos1Val === pos2Val && pos2Val === pos3Val) {
                 showWinner(pos1Val);
+                return; // Exit check once winner is found
             }
         }
     }
 };
+
+resetBtn.addEventListener("click", resetGame);
